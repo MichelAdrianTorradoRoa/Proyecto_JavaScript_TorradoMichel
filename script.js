@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('loginForm');
     const registerForm = document.getElementById('registerForm');
@@ -49,21 +48,3 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('login').style.display = 'block';
     });
 });
-=======
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    // Obtener los valores del formulario
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-
-    // Aquí deberías validar las credenciales del usuario con un backend real.
-    // Para este ejemplo, simplemente verificaremos si el usuario y la contraseña no están vacíos.
-    if (username && password) {
-        // Redirigir a la página principal si el inicio de sesión es exitoso.
-        window.location.href = 'page.html';
-    } else {
-        alert('Por favor, ingrese un usuario y una contraseña válidos.');
-    }
-});
->>>>>>> df0a5d03c268efe7678e96a1f32e2ad64ada1aca

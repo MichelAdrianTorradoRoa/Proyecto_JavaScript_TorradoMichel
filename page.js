@@ -115,17 +115,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateGeneroOptions() {
         const formato = formatoSelect.value;
-    
+
         document.getElementById('generoSerie').classList.toggle('hidden', formato !== 'Serie');
         document.getElementById('generoPelicula').classList.toggle('hidden', formato !== 'Película');
         document.getElementById('generoLibro').classList.toggle('hidden', formato !== 'Libro');
         generoContainer.classList.toggle('hidden', formato === '');
-    
+
         // Mostrar/ocultar los selects de género
         document.getElementById('generoSerieSelect').classList.toggle('active', formato === 'Serie');
         document.getElementById('generoPeliculaSelect').classList.toggle('active', formato === 'Película');
         document.getElementById('generoLibroSelect').classList.toggle('active', formato === 'Libro');
-    
+
         // Mostrar/ocultar los selects de plataforma
         document.getElementById('plataformaSerie').classList.toggle('active', formato === 'Serie');
         document.getElementById('plataformaPelicula').classList.toggle('active', formato === 'Película');
@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const genero = generoOptions ? Array.from(generoOptions.selectedOptions).map(option => option.value) : [];
         const plataformaOptions = formato === 'Libro' ? document.getElementById('plataformaLibro') : 
                                  formato === 'Película' ? document.getElementById('plataformaPelicula') : null;
-                                 
+
         const plataforma = plataformaOptions ? Array.from(plataformaOptions.selectedOptions).map(option => option.value) : [];
         const estado = estadoSelect.value;
         const fecha = fechaInput.value;
@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 option.selected = recurso.genero.includes(option.value);
             });
         }
-        
+
         const plataformaSelect = document.getElementById('plataforma');
         if (plataformaSelect) {
             Array.from(plataformaSelect.options).forEach(option => {
@@ -252,4 +252,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderRecursos();
 });
-

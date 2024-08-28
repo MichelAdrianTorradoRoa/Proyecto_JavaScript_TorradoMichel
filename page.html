@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -32,7 +31,7 @@
             <form id="recursoForm">
                 <label for="nombre">Nombre del recurso:</label>
                 <input type="text" id="nombre" name="nombre" required>
-                
+
                 <label for="formato">Formato:</label>
                 <select id="formato" name="formato" required>
                     <option value="">Selecciona</option>
@@ -60,7 +59,7 @@
                             <option value="Misterio">Misterio</option>
                         </select>
                     </div>
-                    
+
                     <div id="generoPelicula" class="genero-option hidden">
                         <label for="generoPeliculaSelect">Género (Película):</label>
                         <select id="generoPeliculaSelect" name="generoPelicula" multiple>
@@ -79,7 +78,7 @@
                             <option value="Misterio">Misterio</option>
                         </select>
                     </div>
-                    
+
                     <div id="generoLibro" class="genero-option hidden">
                         <label for="generoLibroSelect">Género (Libro):</label>
                         <select id="generoLibroSelect" name="generoLibro" multiple>
@@ -233,156 +232,3 @@
     <script src="page.js"></script>
 </body>
 </html>
-
-
-=======
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serere</title>
-    <link rel="shortcut icon" href="https://img.freepik.com/vector-premium/logotipo-flecha-derecha-e-izquierda-emblema-yin-yang-tech-colorido-icono-degradado-lila_177517-1572.jpg?w=826" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-</head>
-<body>
-<header>
-    <nav class="Encabezado">
-        <div class="sectiones">
-            <div id="serie">
-                <a>Series</a>
-            </div>
-            <div id="pelicula">
-            </div>
-            <div id="libro">
-            </div>
-        </div>
-    </nav>
-    <div id="header">
-        <center><img src="https://img.freepik.com/vector-premium/logotipo-flecha-derecha-e-izquierda-emblema-yin-yang-tech-colorido-icono-degradado-lila_177517-1572.jpg?w=826" width="250" height="50" alt="Encabezado"></center>
-    </div>
-
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <div class="container">
-            <a class="navbar-brand" href="#">Mi Sitio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Libros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Películas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Series</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <button class="btn btn-primary-custom" type="button">Llamada a la Acción</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-</header>
-    <div class="filter-container">
-        <h2>Filtrar Resultados</h2>
-        <form>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="mb-3">
-                        <label for="name">Ingrese el nombre del recurso</label>
-                        <input type="text">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="mb-3">
-                        <label for="category" class="form-label">Categoría</label>
-                        <select class="form-select" id="category">
-                            <option selected>Elige una categoría</option>
-                            <option value="1">Categoría 1</option>
-                            <option value="2">Categoría 2</option>
-                            <option value="3">Categoría 3</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="mb-3">
-                        <label for="price" class="form-label">Rango de Precio</label>
-                        <input type="text" class="form-control" id="price" placeholder="Ej. 10-100">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="mb-3">
-                        <label for="rating" class="form-label">Calificación</label>
-                        <div class="rating">
-                            <input type="radio" id="star1" name="rating" value="1">
-                            <label for="star1" title="1 estrellas">&#9733;</label>
-                            <input type="radio" id="star2" name="rating" value="2">
-                            <label for="star2" title="2 estrellas">&#9733;</label>
-                            <input type="radio" id="star3" name="rating" value="3">
-                            <label for="star3" title="3 estrellas">&#9733;</label>
-                            <input type="radio" id="star4" name="rating" value="4">
-                            <label for="star4" title="4 estrellas">&#9733;</label>
-                            <input type="radio" id="star5" name="rating" value="5">
-                            <label for="star5" title="5 estrella">&#9733;</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 d-flex align-items-end">
-                    <button type="submit" class="btn btn-primary">Aplicar Filtros</button>
-                </div>
-            </div>
-        </form>
-    </div>
-
-    <!-- Resultados -->
-    <div class="results">
-        <div class="row">
-            <!-- Card Example -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagen del producto">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto 1</h5>
-                        <p class="card-text">Descripción breve del producto.</p>
-                        <a href="#" class="btn btn-primary">Ver Detalles</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagen del producto">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto 2</h5>
-                        <p class="card-text">Descripción breve del producto.</p>
-                        <a href="#" class="btn btn-primary">Ver Detalles</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Añadir más cards según sea necesario -->
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-<section>
-    <!--CRUD-->
-</section>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-<script src="page.js"></script>
-</body>
-</html>
->>>>>>> df0a5d03c268efe7678e96a1f32e2ad64ada1aca
