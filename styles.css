@@ -1,0 +1,259 @@
+.hidden {
+    display: none;
+}
+
+#mainPage {
+    display: flex;
+    flex-direction: column; /* Ajusta según la estructura de tu diseño */
+}
+
+/* Paleta de colores */
+:root {
+    --color-principal: #D8BFD8; /* Lila claro */
+    --color-entretenimiento: #B0E0E6; /* Azul claro */
+    --color-literatura: #FF6347; /* Rojo tomate */
+    --color-texto: #333; /* Color del texto */
+    --color-fondo: #F8F8FF; /* Fondo muy claro */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+}
+
+form {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0 0.2rem;
+}
+
+select[multiple] {
+    height: auto; /* Ajusta la altura si es necesario */
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input:disabled,
+textarea:disabled {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+button {
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+button:hover {
+    background-color: #d8a6d8;
+}
+
+button:focus,
+button:active {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.2);
+}
+
+#estrellas {
+    display: flex;
+    margin: 0.5rem 0;
+}
+
+.estrellas .estrella {
+    cursor: pointer;
+    color: #ccc;
+    font-size: 1.5rem;
+    margin-right: 0.1rem; /* Espacio entre estrellas */
+}
+
+.estrellas .estrella.selected {
+    color: #ffcc00;
+}
+
+.estrellas .estrella.hover {
+    color: #ffcc00;
+}
+
+/* Definición de colores para géneros y plataformas según el formato */
+
+.genero-serie,
+#generoSerie {
+    background-color: var(--color-principal); /* Lila para series */
+    color: white;
+    display: none; /* Oculto por defecto */
+}
+
+.genero-pelicula,
+#generoPelicula {
+    background-color: var(--color-literatura); /* Rojo tomate para películas */
+    color: white;
+    display: none; /* Oculto por defecto */
+}
+
+.genero-libro,
+#generoLibro {
+    background-color: var(--color-entretenimiento); /* Azul claro para libros */
+    color: white;
+    display: none; /* Oculto por defecto */
+}
+
+.plataforma-serie,
+#plataformaSerie {
+    background-color: #9370DB; /* Orquídea media para series */
+    color: white;
+    display: none; /* Oculto por defecto */
+}
+
+.plataforma-pelicula,
+#plataformaPelicula {
+    background-color: #FF4500; /* Naranja Rojo para películas */
+    color: white;
+    display: none; /* Oculto por defecto */
+}
+
+.plataforma-libro,
+#plataformaLibro {
+    background-color: #4682B4; /* Azul acero para libros */
+    color: white;
+    display: none; /* Oculto por defecto */
+}
+
+/* Mostrar los elementos según el formato seleccionado */
+#formato[value="serie"] ~ #generoSerie,
+#formato[value="serie"] ~ #plataformaSerie {
+    display: inline-block; /* Mostrar solo para Series */
+}
+
+#formato[value="pelicula"] ~ #generoPelicula,
+#formato[value="pelicula"] ~ #plataformaPelicula {
+    display: inline-block; /* Mostrar solo para Películas */
+}
+
+#formato[value="libro"] ~ #generoLibro,
+#formato[value="libro"] ~ #plataformaLibro {
+    display: inline-block; /* Mostrar solo para Libros */
+}
+
+/* Asegurar que los elementos visibles tienen estilos */
+#generoSerie,
+#generoPelicula,
+#generoLibro,
+#plataformaSerie,
+#plataformaPelicula,
+#plataformaLibro {
+    padding: 0.5rem; /* Añadir padding para mejorar la legibilidad */
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* Estilos de listas */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: white;
+    border: 1px solid #ddd;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: #f1f1f1;
+}
+
+li button {
+    margin-right: 0.5rem;
+}
+
+/* Mejoras de diseño y responsividad */
+@media (max-width: 768px) {
+    #mainPage {
+        flex-direction: column;
+    }
+
+    form {
+        padding: 0.5rem;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .estrellas .estrella {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mejora de accesibilidad */
+button:focus {
+    outline: 3px solid var(--color-principal);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--color-principal);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de estrellas ajustados */
+#estrellas .estrella {
+    color: #ccc; /* Color de estrella no seleccionada */
+    font-size: 1.5rem;
+}
+
+#estrellas .estrella.selected,
+#estrellas .estrella.hover {
+    color: #ffcc00; /* Color de estrella seleccionada */
+}
+
+/* Mejora de botones */
+button:disabled {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #d8a6d8;
+}

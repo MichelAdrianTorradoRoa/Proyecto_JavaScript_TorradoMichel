@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Recursos</title>
+    <link rel="shortcut icon" href="https://img.freepik.com/vector-premium/logotipo-flecha-derecha-e-izquierda-emblema-yin-yang-tech-colorido-icono-degradado-lila_177517-1572.jpg?w=826" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Registro de Recursos</h1>
+        <nav>
+            <ul>
+                <li><a href="page.html" data-section="home">Home</a></li>
+                <li><a href="libros.html" data-section="libros">Libros</a></li>
+                <li><a href="peliculas.html" data-section="peliculas">Películas</a></li>
+                <li><a href="series.html" data-section="series">Series</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="section active">
+            <h2>Bienvenido a la aplicación de registro de recursos</h2>
+            <p>Utiliza el menú para navegar entre libros, películas y series.</p>
+        </section>
+
+        <section id="registro" class="section">
+            <h2>Registro de Recurso</h2>
+            <form id="recursoForm">
+                <label for="nombre">Nombre del recurso:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="formato">Formato:</label>
+                <select id="formato" name="formato" required>
+                    <option value="">Selecciona</option>
+                    <option value="Serie">Serie</option>
+                    <option value="Película">Película</option>
+                    <option value="Libro">Libro</option>
+                </select>
+
+                <div id="generoContainer" class="hidden">
+                    <div id="generoSerie" class="genero-option hidden">
+                        <label for="generoSerieSelect">Género (Serie):</label>
+                        <select id="generoSerieSelect" name="generoSerie" multiple>
+                            <option value="Acción">Acción</option>
+                            <option value="Aventuras">Aventuras</option>
+                            <option value="Comedia">Comedia</option>
+                            <option value="Ciencia ficción">Ciencia ficción</option>
+                            <option value="No ficción/documental">No ficción/documental</option>
+                            <option value="Fantasía">Fantasía</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Terror">Terror</option>
+                            <option value="Musical">Musical</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Suspenso">Suspenso</option>
+                            <option value="Documental">Documental</option>
+                            <option value="Misterio">Misterio</option>
+                        </select>
+                    </div>
+                    
+                    <div id="generoPelicula" class="genero-option hidden">
+                        <label for="generoPeliculaSelect">Género (Película):</label>
+                        <select id="generoPeliculaSelect" name="generoPelicula" multiple>
+                            <option value="Acción">Acción</option>
+                            <option value="Aventuras">Aventuras</option>
+                            <option value="Comedia">Comedia</option>
+                            <option value="Ciencia ficción">Ciencia ficción</option>
+                            <option value="No ficción/documental">No ficción/documental</option>
+                            <option value="Fantasía">Fantasía</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Terror">Terror</option>
+                            <option value="Musical">Musical</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Suspenso">Suspenso</option>
+                            <option value="Documental">Documental</option>
+                            <option value="Misterio">Misterio</option>
+                        </select>
+                    </div>
+                    
+                    <div id="generoLibro" class="genero-option hidden">
+                        <label for="generoLibroSelect">Género (Libro):</label>
+                        <select id="generoLibroSelect" name="generoLibro" multiple>
+                            <option value="Narrativo">Narrativo</option>
+                            <option value="Poético">Poético</option>
+                            <option value="Dramático">Dramático</option>
+                            <option value="Didáctico">Didáctico</option>
+                            <option value="Biográfico">Biográfico</option>
+                            <option value="Autobiográfico">Autobiográfico</option>
+                            <option value="Memorias">Memorias</option>
+                            <option value="Pseudoautobiografía">Pseudoautobiografía</option>
+                            <option value="Diario">Diario</option>
+                            <option value="Dietario">Dietario</option>
+                            <option value="Fábula">Fábula</option>
+                            <option value="Apólogo">Apólogo</option>
+                            <option value="Dicho">Dicho</option>
+                            <option value="Refrán">Refrán</option>
+                            <option value="Sentencia">Sentencia</option>
+                            <option value="Aforismo">Aforismo</option>
+                            <option value="Adagio">Adagio</option>
+                            <option value="Epístola">Epístola</option>
+                            <option value="Diálogo">Diálogo</option>
+                            <option value="Crónica">Crónica</option>
+                            <option value="Panfleto">Panfleto</option>
+                            <option value="Tratado">Tratado</option>
+                            <option value="Ensayo">Ensayo</option>
+                            <option value="Prólogo">Prólogo</option>
+                            <option value="Artículo">Artículo</option>
+                            <option value="Editorial">Editorial</option>
+                            <option value="Crítica">Crítica</option>
+                            <option value="Columna">Columna</option>
+                            <option value="Noticia">Noticia</option>
+                            <option value="Reportaje">Reportaje</option>
+                            <option value="Informe">Informe</option>
+                            <option value="Memoria escrita">Memoria escrita</option>
+                            <option value="Memorial">Memorial</option>
+                            <option value="Aviso">Aviso</option>
+                            <option value="Prospecto">Prospecto</option>
+                            <option value="Guía">Guía</option>
+                            <option value="Diccionario">Diccionario</option>
+                            <option value="Enciclopedia">Enciclopedia</option>
+                            <option value="Oratoria">Oratoria</option>
+                            <option value="Teatro">Teatro</option>
+                            <option value="Audiolibro">Audiolibro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="plataformaContainer">
+                    <div id="plataformaSerie" class="hidden">
+                        <label for="plataformaSerieSelect">Plataforma Serie:</label>
+                        <select id="plataformaSerieSelect" multiple>
+                            <option value="Netflix">Netflix</option>
+                            <option value="Hulu">Hulu</option>
+                            <option value="Amazon Prime">Amazon Prime</option>
+                            <option value="Disney+">Disney+</option>
+                            <option value="HBO Max">HBO Max</option>
+                            <option value="Apple TV+">Apple TV+</option>
+                        </select>
+                    </div>
+                    <div id="plataformaPelicula" class="hidden">
+                        <label for="plataformaPeliculaSelect">Plataforma Película:</label>
+                        <select id="plataformaPeliculaSelect" multiple>
+                            <option value="Netflix">Netflix</option>
+                            <option value="Hulu">Hulu</option>
+                            <option value="Amazon Prime">Amazon Prime</option>
+                            <option value="Disney+">Disney+</option>
+                            <option value="HBO Max">HBO Max</option>
+                            <option value="Apple TV+">Apple TV+</option>
+                        </select>
+                    </div>
+                    <div id="plataformaLibro" class="hidden">
+                        <label for="plataformaLibroSelect">Plataforma Libro:</label>
+                        <select id="plataformaLibroSelect" multiple>
+                            <option value="Amazon">Amazon</option>
+                            <option value="Barnes & Noble">Barnes & Noble</option>
+                            <option value="Google Books">Google Books</option>
+                            <option value="Apple Books">Apple Books</option>
+                            <option value="Kobo">Kobo</option>
+                            <option value="Scribd">Scribd</option>
+                            <option value="Wattpad">Wattpad</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado" required>
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="En progreso">En progreso</option>
+                    <option value="Terminado">Terminado</option>
+                </select>
+
+                <label for="fecha">Fecha de terminación:</label>
+                <input type="date" id="fecha" name="fecha" disabled>
+
+                <label for="valoracion">Valoración final:</label>
+                <div id="estrellas" class="estrellas">
+                    <span data-valor="1" class="estrella">&#9733;</span>
+                    <span data-valor="2" class="estrella">&#9733;</span>
+                    <span data-valor="3" class="estrella">&#9733;</span>
+                    <span data-valor="4" class="estrella">&#9733;</span>
+                    <span data-valor="5" class="estrella">&#9733;</span>
+                </div>
+                <input type="hidden" id="valoracion" name="valoracion" disabled>
+
+                <label for="resena">Reseña personal:</label>
+                <textarea id="resena" name="resena" disabled></textarea>
+
+                <button type="submit">Guardar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Lista de Recursos</h2>
+            <input type="text" id="buscar" placeholder="Buscar por nombre">
+            <label for="filtroEstado">Filtro por estado:</label>
+            <select id="filtroEstado">
+                <option value="">Todos</option>
+                <option value="Pendiente">Pendiente</option>
+                <option value="En progreso">En progreso</option>
+                <option value="Terminado">Terminado</option>
+            </select>
+
+            <label for="filtroFormato">Filtro por formato:</label>
+            <select id="filtroFormato">
+                <option value="">Todos</option>
+                <option value="Serie">Serie</option>
+                <option value="Película">Película</option>
+                <option value="Libro">Libro</option>
+            </select>
+
+            <label for="filtroPlataforma">Filtro por plataforma:</label>
+            <select id="filtroPlataforma">
+                <option value="">Todas</option>
+                <option value="Netflix">Netflix</option>
+                <option value="Amazon">Amazon</option>
+                <option value="HBO">HBO</option>
+                <option value="Kindle">Kindle</option>
+                <option value="Google Books">Google Books</option>
+                <option value="Apple Books">Apple Books</option>
+            </select>
+
+            <ul id="recursoList"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Serere. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="page.js"></script>
+</body>
+</html>
+
+

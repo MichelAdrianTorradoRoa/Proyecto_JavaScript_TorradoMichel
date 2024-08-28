@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Libros</title>
+    <link rel="shortcut icon" href="https://img.freepik.com/vector-premium/logotipo-flecha-derecha-e-izquierda-emblema-yin-yang-tech-colorido-icono-degradado-lila_177517-1572.jpg?w=826" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Registro de Libros</h1>
+        <nav>
+            <ul>
+                <li><a href="page.html" data-section="home">Home</a></li>
+                <li><a href="libros.html" data-section="libros" class="active">Libros</a></li>
+                <li><a href="peliculas.html" data-section="peliculas">Películas</a></li>
+                <li><a href="series.html" data-section="series">Series</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="libros" class="section active">
+            <h2>Lista de Libros</h2>
+            <ul id="librosList"></ul>
+            <!-- Aquí se mostrará la lista de libros guardados -->
+        </section>
+    </main>
+    <script src="libros.js"></script>
+</body>
+</html>
