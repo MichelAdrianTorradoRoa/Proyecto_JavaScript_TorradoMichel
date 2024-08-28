@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', () => {
     const pageKey = 'recursosPage'; // Cambia este valor para cada página si es necesario
     let recursos = JSON.parse(localStorage.getItem(pageKey)) || [];
@@ -254,19 +253,3 @@ document.addEventListener('DOMContentLoaded', () => {
     renderRecursos();
 });
 
-=======
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    
-    const serie = document.getElementById('serie').value;
-    const password = document.getElementById('password').value;
-
-    // Aquí deberías validar las credenciales del usuario con un backend real.
-    // Para este ejemplo, simplemente verificaremos si el usuario y la contraseña no están vacíos.
-    if (serie) {
-        // Redirigir a la página principal si el inicio de sesión es exitoso.
-        window.location.href = 'serie.html';
-    }
-});
->>>>>>> df0a5d03c268efe7678e96a1f32e2ad64ada1aca
