@@ -78,4 +78,4 @@ Aquí se muestran capturas de pantalla de la aplicación:
 
 ## Autor
 
-Hecho por [@TuNombreDeUsuario](https://github.com/TuNombreDeUsuario)
+Hecho por [@MichelAdrianTorradoRoa](https://github.com/MichelAdrianTorradoRoa)
