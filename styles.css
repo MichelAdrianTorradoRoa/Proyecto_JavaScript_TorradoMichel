@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .hidden {
     display: none;
 }
@@ -257,3 +258,95 @@ button:disabled {
 button:hover:not(:disabled) {
     background-color: #d8a6d8;
 }
+=======
+.hidden { 
+    display: none;
+ }
+#mainPage{
+    display: flex;
+    
+}
+html,
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f8f9fc; /* Fondo claro */
+    color: #333;
+}
+
+.Encabezado {
+    background-color: black;
+    width: 100%;
+    max-width: 100%;
+    position: sticky;
+    top: 0;
+    padding: 10px 0;
+    display: block;
+}
+
+.logos {
+    display: flex;
+    flex-direction: row;
+}
+
+.icons-top {
+    margin-right: 15px;
+}
+
+#header img {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    max-width: 100%;
+    height: auto;
+}
+
+.Main {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.navbar-custom {
+    background-color: #6f42c1; /* Color lila oscuro */
+}
+.navbar-custom .navbar-brand, .navbar-custom .nav-link {
+    color: #fff !important;
+}
+.navbar-custom .nav-link:hover {
+    color: #d1b5f0 !important; /* Color lila claro en hover */
+}
+.btn-primary-custom {
+    background-color: #d1b5f0; /* Lila claro */
+    border: none;
+}
+.btn-primary-custom:hover {
+    background-color: #b897e2;
+}
+.rating {
+    display: flex;
+    direction: row-reverse;
+    font-size: 1.5rem;
+    color: #ccc;
+    cursor: pointer;
+}
+.rating input {
+    display: none;
+}
+.rating label {
+    margin: 0;
+    padding: 0;
+    transition: color 0.2s ease;
+}
+.rating input:checked ~ label {
+    color: #f39c12; /* Color de la estrella cuando está seleccionada */
+}
+.rating input:checked ~ label ~ label {
+    color: #f39c12; /* Color de las estrellas anteriores cuando se selecciona una estrella */
+}
+.rating input:focus ~ label {
+    outline: 1px solid #f39c12; /* Borde de la estrella cuando está en foco */
+}
+>>>>>>> df0a5d03c268efe7678e96a1f32e2ad64ada1aca
